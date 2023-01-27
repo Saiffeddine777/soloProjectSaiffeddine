@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales System</title>
+    
+    <link rel="stylesheet" href="style.css" >
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <h1 id='heading1'>Welcome to the dashboard!</h1>
+    <img id="logo" src="/logo.f43c401.png">
+    <center><center>
+    <div class="invoice" id="invoice"> <!--invoice div-->
+        <button id ="newinvbutton">New Invoice</button><br>
+        <select id="selectinv"  hidden> 
+            <option id = "suppliesop" selected>Select an option</option>
+            <option id = "suppliesop">Supplies invoice</option>
+            <option id = "salesop">Sales invoice</option>
+        </select>
+      <div  id="invoicedivs"><!--invoice div of divs-->
+        <input type ="text" placeholder="Client's Name" hidden id="clientname"><input type="text" placeholder="Supplier's Name" hidden id="suppliername">
+        <div id="invclient" class="invbody" hidden><!--invoice client-->
+        <h3>Invoice for client</h3>
+        <table id="invtable">
+            <tr id ="setting"><td>Article Name</td><td>Unit Price</td><td>Quantity</td><td>V.A.T</td><td>Total Article</td></tr>
+        </table >
+        <button id="addarticle">Add Article</button>
+        <button id ="geninvbtn" class="geninvbtn">Generate Invoice Value</button> <p id = "invvalue" ><p>
+      </div> <!--invoice client-->
+      <div id="invsupplier" class="invbody" hidden><!--invoice supplier-->
+        <h3>Invoice for Supplier</h3>
+        <table id="invtable">
+            <tr id ="settings"><td>Article Name</td><td>Unit Price</td><td>Quantity</td><td>V.A.T</td><td>Total Article</td></tr>
+        </table >
+        <button id="addarticles">Add Article</button>
+        <button id ="geninvbtns" class="geninvbtns">Generate Invoice Value</button> <p id = "invvalues" ><p>
+      </div>  <!--invoice supplier--> 
+    </div>
+    <div class="clients" id ="clients">
+        <h3 class="clientlist">Client List</h3>
+        <button id ="genclist">Generate Clients list</button>
+        <ul class="listofclients" id="listofclients"></ul></div>
+    <div class="suppliers" id="suppliers" >
+        <h3 class="supplieslist">Suppliers List</h3>
+        <button id ="genslist">Generate Suppliers list</button>
+        <ul class="listofsuppliers" id="listofsuppliers"></ul></div>
+        <div>   
+            <input type="button" value ="Calculate Balance" id ="calculatebtn" class="calculatebtn">
+            <input type="button" value="Most Lucrative Client" id ="bestclientbtn" class="bestclientbtn">
+            <p id="balance" class = "balance"></p>
+       </div>
+    <script src="main.js"></script>
+</body>
+</html>
+

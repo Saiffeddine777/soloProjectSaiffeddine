@@ -1,0 +1,13 @@
+body{
+    background-color:rgb(213, 255, 241);
+    font-family :arial , sans-serif; 
+}
+
+#logo{
+    width : 150px;
+    margin-left : 30px;
+    margin-top: 40px;
+}
+#heading{
+   text-align: right;
+}
